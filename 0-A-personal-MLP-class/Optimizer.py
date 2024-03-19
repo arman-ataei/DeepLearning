@@ -30,6 +30,7 @@ class Optimizer:
                           active=nueron.active,
                           weights= nueron.weights + delta,
                           bios= nueron.bios)
+        
         f1 = getattr(d_neuron.Loss, loss_fun)
         f2 = getattr(nueron.Loss, loss_fun)
         return (f1(data= data )-f2(data=data))/delta

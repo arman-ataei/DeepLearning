@@ -1,4 +1,6 @@
 
+
+import numpy as np
 from Neuron import Neuron
 from typing import Literal, get_args
 from Optimizer import Optimizer
@@ -65,6 +67,6 @@ class Perceptron(Neuron):
         return new_weights
 
         
-
+# TODO: complete the mini-Batch GD
     def mBGD(self, data: np.array, alpha: float = 0.1,delta=0.001, epoch=4, lss_fun='MAbE'):
         print("mBGD")
