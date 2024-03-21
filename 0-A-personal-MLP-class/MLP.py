@@ -28,3 +28,11 @@ class MLP:
         
         layer = Layer(n_neuron=n_neuron, num_features = n_features,weightss = weightss, bios=bioses, act_func=active )
         self.Layers.append(layer)
+    def calculate(self, features: np.array):
+        n_layers = len(self.Layers)
+
+        for i in range(n_layers):
+            self.output = [out[0] for out in self.Layers[i].calculate(data=features)]
+            features = self.output
+        
+        return self.output
