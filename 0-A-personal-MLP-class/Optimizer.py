@@ -23,8 +23,8 @@ class Optimizer:
 
         output: (Loss(w+delta) - Loss(w))/delta
         """
-        options = get_args(_Losses)
-        assert loss_fun in options, f" '{loss_fun}' is not in {options}"
+        loss_functions = get_args(_Losses)
+        assert loss_fun in loss_functions, f" '{loss_fun}' is not in {loss_functions}"
         
         d_neuron = Neuron(num_features=nueron.num_features, 
                           active=nueron.active,

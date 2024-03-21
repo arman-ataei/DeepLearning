@@ -15,7 +15,7 @@ class Neuron:
         self.bios = kwargs.get('bios', 0 )
         act_tmp = kwargs.get('act_func', None)
        
-        # print(act_tmp)
+      
         
         if act_tmp:
             self.active = act_tmp
@@ -28,7 +28,8 @@ class Neuron:
     
     def calculate(self, X: np.array):
         """ 
-        X: inputs of the perceptron
+        X:  must be a single input one dimesional array of length num_features
+        
         """
         res = 0
         for i in range(self.num_features):

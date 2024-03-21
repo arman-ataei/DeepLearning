@@ -1,5 +1,6 @@
 import numpy as np
-
+from typing import Literal
+_Activations = Literal["linear", "binary", "sigmoid", "tanh" ,"relu"]
 class Activation:
     def __init__(self) -> None:
         pass

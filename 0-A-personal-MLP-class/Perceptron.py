@@ -46,7 +46,7 @@ class Perceptron(Neuron):
         last element of each record is the label of that record
         """
         rnd_ind = np.random.randint(0,np.size(data[:,1]))
-        print(rnd_ind)
+        
         options = get_args( _Losses)
         assert lss_fun in options, f" '{lss_fun}' is not in {options}"
 
